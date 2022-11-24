@@ -21,7 +21,7 @@ apisecret=""
 @app.get("/getdata")
 async def getInformation(info : Request):
     req_info = await info.json()
-    requests.get('https://1point1.in/test/index.php?data='+str(req_info))
+    requests.get('addurl')
     return {
         "status" : "SUCCESS",
         "data" : req_info
@@ -34,7 +34,7 @@ def buyit(data:str):
     print(Request.json())
     req_info = Request.json()
     print(req_info)
-    #requests.get('https://1point1.in/test/index.php?data='+req_info)
+    
     
     return "Added data"
 
